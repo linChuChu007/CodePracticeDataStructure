@@ -41,6 +41,24 @@ public class Tree {
         }
     }
     public boolean find(int value){
-         return true;
+         Node current=root;
+         while(current!=null){
+             if(value<current.value)
+             {
+                 current=current.leftChild;
+             }
+             else if(value>current.value){
+                 current=current.rightChild;
+             }
+             else{
+                 return true;
+             }
+         }
+         return false;
     }
+
+    //PRE-ORDER TRAVERSAL: ROOT LEFT RIGHT 
+    //IN-ORDRE:  LEFT ROOT RIGHT  ASCENDING ORDER 
+    //           RIGHT ROOT LEFT  DESCENDING ORDER
+    //POST-ORDER:LEFT RIGHT ROOT
 }
